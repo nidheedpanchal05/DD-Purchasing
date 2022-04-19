@@ -10,6 +10,10 @@
   margin: 2rem 5rem;
 }
 
+.row div {
+  margin: 1rem 0rem;
+}
+
 .hero-image {
   object-fit: cover;
 }
@@ -66,6 +70,7 @@
 .acheivements .ach-grid {
   display: grid;
   grid-template-columns: auto auto;
+  margin-top: 1rem;
 }
 
 .main-title {
@@ -75,8 +80,8 @@
 
 .testimonial {
   background-color: rgba(103, 187, 255, 0.1);
-  padding: 2rem 5rem;
-  margin: 2rem 0rem;
+  padding: 4rem 5rem;
+  margin: 5rem 0rem;
   width: 100vw;
 }
 
@@ -96,7 +101,9 @@
 
 @media screen and (max-width: 700px) {
   .clients {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 1rem;
   }
   .main .row {
     margin: 1rem;
@@ -105,13 +112,29 @@
     margin-top: 3rem;
   }
   .main-title {
-    font-size: 30px;
+    font-size: 32px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 1rem;
+  }
+  .footer div {
+    width: 100%;
+  }
+
+  .footer .nav {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center !important;
   }
 }
 
 @media screen and (max-width: 480px) {
   .main {
-    margin-top: 1rem;
+    margin-top: 3rem;
   }
 
   .main .row {
@@ -125,12 +148,10 @@
     display: flex;
     flex-direction: column;
   }
-  .footer * {
-    display: block;
-  }
 
   .testimonial {
-    padding: 1rem 0rem;
+    padding: 2rem 0rem;
+    padding-bottom: 5rem;
     margin: 1rem 0rem;
   }
 }

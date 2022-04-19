@@ -63,8 +63,7 @@ function Products() {
     <div className='main product'>
       <div className='header'>
         <h1 className='heading'>
-          {' '}
-          <span>Products</span>{' '}
+          <span>Products</span>
         </h1>
         <p>We offer a variety of plastic products</p>
       </div>
@@ -74,7 +73,7 @@ function Products() {
         <button className='btn'>Card</button>
         <button className='btn '>Web</button>
       </div>
-      <div className='row'>
+      <div className='row product-list'>
         {data.map((product, index) => {
           return (
             <div className='col-sm-4' key={index}>

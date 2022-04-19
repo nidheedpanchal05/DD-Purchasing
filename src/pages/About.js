@@ -28,6 +28,7 @@ function About() {
             </li>
           </ul>
         </div>
+
         <div className='col-sm-6'>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum

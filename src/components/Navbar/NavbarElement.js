@@ -1,58 +1,65 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Navbar() {
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const changeWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', changeWidth);
+    return () => {
+      window.removeEventListener('resize', changeWidth);
+    };
+  }, []);
 
   return (
-    <nav className='navbar navbar-expand-lg'>
-      <Link className='navbar-brand' to='#'>
+    <div className='navbar'>
+      <div className='nav-brand'>
         <h1 className='title'>DD Purcharsing Solutions</h1>
-      </Link>
-
-      <div
-        className={`${
-          isNavCollapsed ? 'collapse navbar-collapse ' : ''
-        } justify-content-end`}
-      >
-        <ul className='navbar-nav'>
-          <li className='nav-item active'>
-            <Link className='nav-link' to='/'>
-              Home
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link className='nav-link' to='/about'>
-              About
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link className='nav-link' to='#'>
-              Products
-            </Link>
-          </li>
-
-          <li className='nav-item'>
-            <Link className='nav-link' to='/'>
-              Testimonials
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link className='nav-link ' to='#'>
-              Contact
-            </Link>
-          </li>
-        </ul>
+        {screenWidth <= 767 && (
+          <button onClick={() => setToggleMenu(!toggleMenu)}>
+            {toggleMenu ? <FaTimes /> : <FaBars />}
+          </button>
+        )}
       </div>
-      <button
-        className='navbar-toggler'
-        type='button'
-        onClick={() => setIsNavCollapsed(!isNavCollapsed)}
-      >
-        {isNavCollapsed ? <FaBars /> : <FaTimes />}
-      </button>
-    </nav>
+      <nav>
+        {(toggleMenu || screenWidth > 767) && (
+          <ul className='navbar-nav'>
+            <li className='nav-item active'>
+              <Link className='nav-link' to='/'>
+                Home
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className='nav-link' to='/about'>
+                About
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className='nav-link' to='#'>
+                Products
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link className='nav-link' to='/'>
+                Testimonials
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className='nav-link ' to='#'>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        )}
+      </nav>
+    </div>
   );
 }
 

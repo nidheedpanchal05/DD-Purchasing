@@ -5,11 +5,10 @@ import { RiMailSendLine, RiPhoneLine } from 'react-icons/ri';
 
 function Contact() {
   return (
-    <div className='main'>
+    <div className='main contact'>
       <div className='header'>
         <h1 className='heading'>
-          {' '}
-          <span>Contact</span>{' '}
+          <span>Contact</span>
         </h1>
       </div>
       <div className='row'>
@@ -42,7 +41,7 @@ function Contact() {
             <span className='contact-icon'>
               <TiLocationOutline />
             </span>
-            <p>B-8/302, Veena nagar, LBS Marg, Mulund (W) Mumbai</p>
+            B-8/302, Veena nagar, LBS Marg, Mulund (W) Mumbai{' '}
           </div>
           <div className='contact-details'>
             <span className='contact-icon'>
@@ -54,7 +53,7 @@ function Contact() {
             <span className='contact-icon'>
               <RiPhoneLine />
             </span>
-            <p>+91 9833551927</p>
+            +91 9833551927
           </div>
         </div>
         <div className='col-md-4'>
