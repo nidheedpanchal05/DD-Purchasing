@@ -1,0 +1,15 @@
+.navbar {
+  margin: 0rem 5rem;
+  color: black !important;
+}
+
+.title {
+  color: black;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    margin: 0 1rem;
+  }
+}

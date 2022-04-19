@@ -1,38 +1,236 @@
-.App {
+* {
+  font-family: Roboto;
+}
+.header {
+  color: black;
+  text-align: center;
+  margin: 1rem;
+}
+.heading {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.heading span:after,
+.heading span:before {
+  margin: 0 1rem;
+  color: rgb(0, 140, 255);
+  content: '\00a0\00a0\00a0\00a0\00a0\00a0';
+  text-decoration: line-through;
+}
+
+.about,
+.contact {
+  margin-top: 4rem;
+}
+
+.about-list {
+  list-style-type: circle;
+  margin: 0;
+}
+
+.product-variety .btn {
+  margin: 0.4rem;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.product-variety .btn:focus {
+  color: white;
+  background-color: rgb(0, 140, 255);
+  outline: none;
+}
+
+.product-image {
+  border-radius: 0.2rem;
+  border: 1px solid whitesmoke;
+}
+
+.acheivements-icon {
+  font-size: 40px;
+  margin: 0rem 1rem;
+  color: rgb(0, 140, 255);
+  display: flex;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.socials button {
+  border: 1px solid rgb(0, 140, 255);
+  border-radius: 4rem;
+  height: 2rem;
+  width: 2rem;
+  line-height: 1rem;
+  background-color: transparent;
+  margin-right: 0.2rem;
+  color: rgb(0, 140, 255);
+  font-size: 20px;
+}
+
+.career-card {
+  display: inline-block;
+  text-transform: capitalize;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 1rem;
+  width: 22%;
+  overflow: hidden;
+  position: relative;
+  margin: 0.5rem 1.5%;
+  z-index: 1;
+  box-shadow: 1px 1px 20px rgba(0, 77, 139, 0.1);
+}
+
+.career-card .career-icon {
+  background-color: rgb(0, 140, 255);
+  color: whitesmoke;
+  font-size: 40px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  line-height: 20px;
+  border-radius: 3rem;
+  padding: 10px;
+}
+
+.card-design {
+  width: 100px;
+  display: flex;
+  height: 100px;
+  position: absolute;
+  top: -15%;
+  left: 85%;
+  z-index: -1;
+  border-radius: 5rem;
+  background-color: rgb(0, 140, 255, 0.1);
+}
+
+.tasks {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.card {
+  padding: 0;
+}
+
+.card-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  margin: 9rem 1rem 1rem 1rem;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  z-index: 3;
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+.card-body h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.product-name {
+  text-transform: capitalize;
+}
+
+.contact-form {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contact-form * {
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contact-form button {
+  margin: 0;
+  background-color: rgb(0, 140, 255);
+  color: whitesmoke;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.testimonial-card {
+  border-radius: 0.2rem;
+  position: relative;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.testimonial-card .avtar {
+  position: absolute;
+  top: 2.5rem;
+  left: -0.5rem;
+}
+
+.testimonial-card .avtar img {
+  height: 5rem;
+  border-radius: 0.2rem;
+  width: 5rem;
+  border: 0.5rem solid white;
+}
+
+.testimonial-card .testimonial-body {
+  background-color: white;
+  padding: 2rem 4rem;
+}
+
+.testimonial-body h4 {
+  color: gray;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.testimonial-body .quote {
+  font-size: 30px;
+  color: rgb(0, 140, 255, 0.1);
+}
+
+.slick-dots li.slick-active button:before {
+  color: rgb(0, 140, 255);
+}
+
+.contact-icon {
+  color: rgb(0, 140, 255);
+  font-size: 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-right: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-details {
+  padding: 0rem 1rem;
+  display: flex;
+  align-items: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 700px) {
+  .about .contact {
+    margin-top: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .career-card {
+    width: 47%;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .tasks {
+    display: flex;
+  }
+  .contact-icon {
+    padding: 0rem;
+    margin: 0;
+  }
+  .contact-details {
+    padding: 0;
+    margin: 1rem 0rem;
   }
 }
