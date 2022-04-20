@@ -11,7 +11,7 @@
 }
 
 .row div {
-  margin: 1rem 0rem;
+  margin-top: 1rem;
 }
 
 .hero-image {
@@ -42,9 +42,9 @@
   background-color: rgba(103, 187, 255, 0.1);
   display: flex;
   flex-wrap: wrap;
-  padding: 0rem 4rem;
+  padding: 0rem 5rem;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   margin-right: 0;
   margin-left: 0;
@@ -63,7 +63,7 @@
   flex-wrap: wrap;
   padding: 2rem 5rem;
   margin: 2rem 0rem;
-  width: 100vw;
+  width: 100%;
   align-items: center;
 }
 
@@ -82,7 +82,7 @@
   background-color: rgba(103, 187, 255, 0.1);
   padding: 4rem 5rem;
   margin: 5rem 0rem;
-  width: 100vw;
+  width: 100%;
 }
 
 .footer {
@@ -117,7 +117,7 @@
   .footer {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     padding: 1rem;
   }
   .footer div {

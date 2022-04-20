@@ -54,7 +54,7 @@ function CareerHistory() {
         </h1>
         <p>I have 30 years of work experience</p>
       </div>
-      <div className='row'>
+      <div className='row career-container'>
         {careers.map((career, index) => {
           return (
             <div className='col-md-3 career-card' key={index}>
